@@ -7,21 +7,23 @@ using namespace std;
 
 class Usuario{
     private: 
-        string nombre {};
-        string correo_elect {};
-        string telefono {};
+        string nombre;
+        string correo_elect;
+        string telefono;
+        bool pago_tarjeta;
     
     public: 
         Usuario(){
-            string nombre {"XXXX"};
-            string correo_elect {"XXXX@gmail.com"};
-            string telefono {"55XXXXXX"};
+            nombre = "XXXX";
+            correo_elect = "XXXX@gmail.com";
+            telefono = "55XXXXXX";
+            pago_tarjeta = false;
         }
         void ingresar_datos (){
             string nom {};
             string corr {};
             string tel {};
-            cout << "Inserte su nombre: "; cin >> nom;
+            cout << "Inserte su nombre: "; getline(cin,nom);
             cout << "Inserte su correo electronico: "; cin >> corr;
             cout << "Inserte su telefono: "; cin >> tel;
 
@@ -31,20 +33,12 @@ class Usuario{
         }
 
         string imprimir_datos (){
-            return nombre + "\n" + correo_elect + "\n" + telefono + "\n";
+            return "Datos del usuario: \n" + nombre + "\n" + correo_elect + "\n" + telefono + "\n";
         }
 
-        void ingresar_pago (){
-            string nom {};
-            string corr {};
-            string tel {};
-            cout << "Inserte su nombre: "; cin >> nom;
-            cout << "Inserte su correo electronico: "; cin >> corr;
-            cout << "Inserte su telefono: "; cin >> tel;
-
-            nombre = nom;
-            correo_elect = corr;
-            telefono = tel;
+        void pago_con_tarjeta (){
+            pago_tarjeta = true;
+            cout << "Se hara el pago con tarjeta." << endl;
         }
 }; //Clase usuario. 
 
