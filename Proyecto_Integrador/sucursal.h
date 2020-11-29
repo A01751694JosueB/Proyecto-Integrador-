@@ -1,3 +1,6 @@
+#ifndef SUCURSAL_C
+#define SUCURSAL_C
+
 #include <iostream>
 #include <string>
 using namespace std;
@@ -21,6 +24,7 @@ class Sucursal{
             horario = h;
         }
         void desplegar_datos(){
+            cout << "\nDatos de la sucursal: " << endl;
             cout << "El local esta en: " << direccion << endl;
             cout << "El titular de la sucursal es: " << titular_sucursal << endl;
             cout << "El horario de la sucursal es: " << horario << endl;
@@ -32,7 +36,7 @@ class Sucursal{
             string hor;
 
             cin.ignore(32767,'\n');
-            cout << "Inserte la direccion: "; getline(cin,dir);
+            cout << "\nInserte la direccion: "; getline(cin,dir);
             cout << "Inserte el titular: "; getline(cin,tit);
             cout << "Inserte el horario: "; getline(cin,hor);
 
@@ -42,7 +46,8 @@ class Sucursal{
         }
         void existencia_producto (){
             si_producto = true;
-            cout << "El producto esta existente: " << si_producto << endl;
+            cout << "\nEl producto esta existente: " << si_producto << endl;
         }
-
 };
+
+#endif

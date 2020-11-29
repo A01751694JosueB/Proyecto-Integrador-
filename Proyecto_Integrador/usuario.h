@@ -23,7 +23,7 @@ class Usuario{
             string nom {};
             string corr {};
             string tel {};
-            cout << "Inserte su nombre: "; getline(cin,nom);
+            cout << "\nInserte su nombre: "; getline(cin,nom);
             cout << "Inserte su correo electronico: "; cin >> corr;
             cout << "Inserte su telefono: "; cin >> tel;
 
@@ -32,13 +32,16 @@ class Usuario{
             telefono = tel;
         }
 
-        string imprimir_datos (){
-            return "Datos del usuario: \n" + nombre + "\n" + correo_elect + "\n" + telefono + "\n";
+        void imprimir_datos (){
+            cout << "\nDatos del usuario: " << endl; 
+            cout << "Nombre del usuario: " << nombre << endl; 
+            cout << "Correo electronico: " << correo_elect << endl;
+            cout << "Telefono: " << telefono << endl;
         }
 
         void pago_con_tarjeta (){
             pago_tarjeta = true;
-            cout << "Se hara el pago con tarjeta." << endl;
+            cout << "\nSe hara el pago con tarjeta." << endl;
         }
 }; //Clase usuario. 
 

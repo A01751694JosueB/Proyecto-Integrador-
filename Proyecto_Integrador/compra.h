@@ -1,4 +1,9 @@
 #include "usuario.h"
+#include "destinatario.h"
+#include "producto.h"
+
+#ifndef COMPRA_C
+#define COMPRA_C
 
 #include <iostream>
 #include <string>
@@ -7,20 +12,36 @@ using namespace std;
 class Compra {
     private: 
         Usuario comprador {};
-        int numero_compra = 0;
+        Destinatario destinatario {};
+        Producto producto {};
+        int numero_compra;
         bool producto_confirmar;
     
     public: 
         Compra (){
             comprador = Usuario {};
-            numero_compra = 00001;
+            destinatario = Destinatario {};
+            producto = Producto {};
+            numero_compra = 00000;
             producto_confirmar = false;
         }
-
-        void desplegar_datos (){
-            cout << numero_compra << endl;
-            cout << "El producto esta seleccionado: " << producto_confirmar << endl;
+        Usuario desplegar_usuario (Usuario usuario){
+            return usuario;
         }
+
+        Producto desplegar_producto (Producto pro){
+            return pro;
+        }
+
+        Destinatario desplegar_destinatario (Destinatario des){
+            return des;
+        }
+
+        void datos_compra (int n){   
+            numero_compra = numero_compra + n;
+            cout << "Numero de compra: " << to_string(numero_compra) << endl;
+        }
+
         void confirmar_producto(){
             producto_confirmar = true;
         }
@@ -28,3 +49,5 @@ class Compra {
             producto_confirmar = false;
         }
 };
+
+#endif COMPRA_C
