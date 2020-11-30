@@ -24,7 +24,7 @@ class Sucursal{
             horario = h;
         }
         void desplegar_datos(){
-            cout << "\nDatos de la sucursal: " << endl;
+            cout << "\nDatos de la sucursal.\n" << endl;
             cout << "El local esta en: " << direccion << endl;
             cout << "El titular de la sucursal es: " << titular_sucursal << endl;
             cout << "El horario de la sucursal es: " << horario << endl;

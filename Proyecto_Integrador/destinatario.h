@@ -64,7 +64,7 @@ class Destinatario{
         }
     }
     void imprimir_datos(){
-        cout << "\nDatos del destinatario: " << endl; 
+        cout << "\nDatos del destinatario. \n" << endl; 
         cout << "Nombre del destinatario: " << nombre << endl; 
         cout << "Correo electronico: " << correo_electronico << endl; 
         cout << "Telefono: " << telefono << endl; 

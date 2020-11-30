@@ -25,7 +25,7 @@ class Producto {
         }
 
         void desplegar_datos(){
-            cout << "\nDatos del producto: " << endl;
+            cout << "\nDatos del producto. \n" << endl;
             cout << "Tamanio del producto: " << tamanio << endl;
             cout << "Peso del producto (kg): " << to_string(peso) << " kg" << endl;
             cout << "Costo del producto: $" << to_string(costo) << endl;
@@ -42,6 +42,7 @@ class Producto {
             string cat;
 
             cout << "\nDatos del producto: " << endl;
+            cin.ignore(32767,'\n');
             cout << "Tamanio del producto: "; getline(cin,tam);
             cout << "Peso del producto (kg): "; cin >> p;
             cout << "Costo del producto: "; cin >> cos;

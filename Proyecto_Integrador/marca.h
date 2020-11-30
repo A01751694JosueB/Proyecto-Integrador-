@@ -19,6 +19,7 @@ class Marca {
         }
         void datos_mercado(){
             string nom;
+            cin.ignore(32767,'\n');
             cout << "\nInserte el nombre de la marca: "; getline(cin,nom);
             nombre_tienda = nom;
             cout << "Se hara una compra de la marca: " << nombre_tienda << endl;
