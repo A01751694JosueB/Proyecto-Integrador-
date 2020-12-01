@@ -2,9 +2,6 @@
 #include "destinatario.h"
 #include "producto.h"
 
-#ifndef COMPRA_C
-#define COMPRA_C
-
 #include <iostream>
 #include <string>
 using namespace std;
@@ -44,12 +41,10 @@ class Compra {
 
         void confirmar_producto(){
             producto_confirmar = true;
-            cout << "\n¿El producto está confirmado?: " << to_string(producto_confirmar) << endl;
+            cout << "\n¿El producto esta confirmado?: " << to_string(producto_confirmar) << endl;
         }
         void descartar_producto(){
             producto_confirmar = false;
             cout << "\n¿El producto esta confirmado?: " << to_string(producto_confirmar) << endl;
         }
 };
-
-#endif COMPRA_C

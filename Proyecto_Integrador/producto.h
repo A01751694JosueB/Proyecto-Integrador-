@@ -8,8 +8,8 @@ using namespace std;
 class Producto {
     private: 
         string tamanio;
-        float peso; 
-        float costo;
+        double peso; 
+        double costo;
         string categoria;
         bool garantia;
         int cantidad;
@@ -32,23 +32,24 @@ class Producto {
             cout << "Categoria del producto: " << categoria << endl;
             cout << "Tiene garantia el producto: " << to_string(garantia) << endl;
             cout << "Cantidad del producto: " << to_string(cantidad) << endl;
+            cin.ignore(32767,'\n');
         }
 
         void insertar_datos(){
             string tam;
-            float p;
-            float cos;
+            double p;
+            double cos;
             string u;
             string cat;
-
-            cout << "\nDatos del producto: " << endl;
-            cin.ignore(32767,'\n');
+            
+            cout << "\nDatos del producto. " << endl;
             cout << "Tamanio del producto: "; getline(cin,tam);
             cout << "Peso del producto (kg): "; cin >> p;
             cout << "Costo del producto: "; cin >> cos;
             cin.ignore(32767,'\n');
             cout << "Categoria del producto: "; getline(cin, cat);
-
+            //cin.ignore(32767,'\n');
+            
             tamanio = tam;
             peso = p;
             costo = cos;
@@ -60,6 +61,7 @@ class Producto {
             int can;
             cout << "\nInserta cantidad del producto: "; cin >> can;
             cantidad = can;
+            cin.ignore(32767,'\n');
         }
 
         void si_garantia(){

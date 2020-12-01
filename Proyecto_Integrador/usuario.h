@@ -23,10 +23,10 @@ class Usuario{
             string nom {};
             string corr {};
             string tel {};
-            cin.ignore(32767,'\n');
             cout << "\nInserte su nombre: "; getline(cin,nom);
             cout << "Inserte su correo electronico: "; cin >> corr;
             cout << "Inserte su telefono: "; cin >> tel;
+            cin.ignore(32767,'\n');
 
             nombre = nom;
             correo_elect = corr;
@@ -38,6 +38,7 @@ class Usuario{
             cout << "Nombre del usuario: " << nombre << endl; 
             cout << "Correo electronico: " << correo_elect << endl;
             cout << "Telefono: " << telefono << endl;
+            cin.ignore(32767,'\n');
         }
 
         void pago_con_tarjeta (){

@@ -18,19 +18,27 @@ int main(){
     string afirmacion = "Si";
 
     while ((afirmacion == "Si")||(afirmacion=="si")){
-
         cout << "¡Bienvenido a la tienda en linea!" << endl;
         cout << "\nRegistrese para poder elegir su compra." << endl;
-        u1.ingresar_datos();
+        cout << "Pulse enter para continuar." << endl;
+        cin.ignore(32767,'\n');
 
-
-        cout << "\n¿Quiere corroborar sus datos?"; cin >> afirmacion;
+        cout << "\n¿Quiere registrar sus datos?"; cin >> afirmacion;
         if ((afirmacion == "Si")||(afirmacion=="si")){
-            comp1.desplegar_usuario(u1).imprimir_datos();
+            cin.ignore(32767,'\n');
+            u1.ingresar_datos();
+            cout << "\n¿Quiere corroborar sus datos?"; cin >> afirmacion;
+            
+            if ((afirmacion == "Si")||(afirmacion=="si")){
+                comp1.desplegar_usuario(u1).imprimir_datos();
+            }
         }
-
+        
         cout << "\nIngrese los datos de la marca." << endl;
+        cout << "\nPulse enter para continuar." << endl;
+        cin.ignore(32767,'\n');
         m1.datos_mercado();
+        m1.desplegar_datos();
 
         cout << "\nAhora ingrese los datos del producto a comprar." << endl;
         p1.insertar_datos();
